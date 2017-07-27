@@ -74,22 +74,17 @@ $(function() {
      * clicked and does it hide when clicked again.
      */
 
-        // beforeEach(function() {
-        //     $('.menu-icon-link').click();
-        //     });
-
-        it('shows when clicked', function(){
+        it('shows when clicked, hide when clicked again', function(){
             $('.menu-icon-link').click();
             expect($('body')).not.toHaveClass("menu-hidden");
             $('.menu-icon-link').click();
             expect($('body')).toHaveClass("menu-hidden");
         ;});
 
-            // it('hide when clicked once more', function(){
-            //      expect($('.slide-menu').is(':visible')).toBe(false);
-            //  });
+
      });
     /* TODO: Write a new test suite named "Initial Entries" */
+    describe('The menu', function() {
 
     /* TODO: Write a test that ensures when the loadFeed
      * function is called and completes its work, there is at least
@@ -97,7 +92,7 @@ $(function() {
      * Remember, loadFeed() is asynchronous so this test will require
      * the use of Jasmine's beforeEach and asynchronous done() function.
      */
-
+}
     /* TODO: Write a new test suite named "New Feed Selection" */
 
     /* TODO: Write a test that ensures when a new feed is loaded
