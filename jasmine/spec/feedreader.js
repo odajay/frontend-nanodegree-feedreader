@@ -27,6 +27,8 @@ $(function() {
         });
 
 
+
+
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
@@ -71,19 +73,21 @@ $(function() {
      * should have two expectations: does the menu display when
      * clicked and does it hide when clicked again.
      */
-        describe('icon', function() {
-            beforeEach(function() {
-                $('.menu-icon-link').click();
-            });
 
-            it('shows when icon is clicked', function(){
-                expect($('.menu').is(':visible')).toBe(true);
-            });
+        // beforeEach(function() {
+        //     $('.menu-icon-link').click();
+        //     });
 
-            it('hide when icon is clicked once more', function(){
-                expect($('.menu').is(':visible')).toBe(false);
-            });
-        })
+        it('shows when clicked', function(){
+            $('.menu-icon-link').click();
+            expect($('body')).not.toHaveClass("menu-hidden");
+            $('.menu-icon-link').click();
+            expect($('body')).toHaveClass("menu-hidden");
+        ;});
+
+            // it('hide when clicked once more', function(){
+            //      expect($('.slide-menu').is(':visible')).toBe(false);
+            //  });
      });
     /* TODO: Write a new test suite named "Initial Entries" */
 
