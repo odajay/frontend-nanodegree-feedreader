@@ -11,9 +11,9 @@ $(function() {
 
         //Looped through all item of the allFeeds arrays and tested the existence of their url and if the url was empty or not
         it('can loop through each feed', function() {
-            for (var i = 0; i < allFeeds.length; i++) {
-                expect(allFeeds[i].url).toBeDefined();
-                expect(allFeeds[i].url).not.toBe("");
+            allFeeds.forEach(function(feed) {
+                expect(feed.url).toBeDefined();
+                expect(feed.url).not.toBe("");
             }
         });
 
