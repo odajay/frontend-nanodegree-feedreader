@@ -14,7 +14,7 @@ $(function() {
             allFeeds.forEach(function(feed) {
                 expect(feed.url).toBeDefined();
                 expect(feed.url).not.toBe("");
-              })
+              });
         });
 
          //Looped through all item of the allFeeds arrays and tested the existence of their name and if their name was empty or not
@@ -43,8 +43,6 @@ $(function() {
             $('.menu-icon-link').click();
             expect($('body')).toHaveClass("menu-hidden");
         });
-
-
     });
 
     describe('Initial Entries', function() {
@@ -57,7 +55,6 @@ $(function() {
         it('load at least one entry', function() {
             expect($('.feed .entry').length).toBeGreaterThan(0);
         });
-
     });
 
 
