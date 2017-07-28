@@ -27,13 +27,8 @@ frontend-nanodegree-feedreader/
 
 ## Live access
 
-In order to test the application directly, please follow this link:
+In order to test the application directly, please [click here](http://odajay.com/frontend-nanodegree-feedreader/).
 
--------------------------------------
-http://odajay.com/frontend-nanodegree-feedreader/
--------------------------------------
-
- Please enter the url between the two lines of dash to test a web-hosted version of the application.
 
 ## Copyright and license
 
