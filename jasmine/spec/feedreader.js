@@ -63,16 +63,16 @@ $(function() {
 
     describe('New Feed Selection', function() {
 
-         //Load a first time the feed and retrive content from the first title available, then load another feed, retrieve the same data and compare the two
+         //Load a first time the feed and retrieve content from the first feed available, then load another feed, retrieve the same data and compare the two
         beforeEach(function(done) {
             loadFeed(0, done);
         });
 
         it('has the data changed', function(done) {
-            var data0 = $('article > h2').text();
+            var data0 = $('.feed').text();
             loadFeed(1, function() {
-                var data1 = $('article > h2').text();
-                expect(data0).not.toContain(data1);
+                var data1 = $('.feed').text();
+                expect(data0).not.toBe(data1);
                 done();
             });
         });
